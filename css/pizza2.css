@@ -1,0 +1,36 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+header{
+    background-color: black;
+    color: white;
+    padding: 15px;
+}
+
+input, select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+    main{
+        width: 80%;
+        margin: 20px auto;
+
+    }
+
+    form{
+        margin: 20px 0;
+    }
