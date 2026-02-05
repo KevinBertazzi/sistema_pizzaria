@@ -17,33 +17,33 @@
     <main>
 
 
-        <form action="">
+        <form action="backend/cadatrar.php" method="post">
 
 
             <div id="grid">
 
                 <div>
                     <label for="">Sabor</label>
-                    <input type="" name="sabor" id="sabor">
+                    <input type="text" name="sabor" id="sabor" required>
                 </div>
 
                 <div>
                     <label for="">Ingrediente</label>
-                    <input type="" name="ingrediente" id="iIngrediente">
+                    <input type="text" name="ingrediente" id="iIngrediente" required>
                 </div>
 
                 <div>
                     <label for="">Tamanho</label>
-                    <select name="" id="">
-                        <option value="">Selecione...</option>
+                    <select name="tamanho" id="" required>
+                        <option value="" selected disabled>Selecione...</option>
                         <option value="P">Pequena</option>
                         <option value="G">Grande</option>
                     </select>
                 </div>
 
                 <div>
-                    <label for="">Valor</label>
-                    <input type="number" name="Valor" id="Valor">
+                    <label for="">valor</label>
+                    <input type="number" name="valor" id="valor"  step="0.01" min="1" mistrequired>
                 </div>
 
             </div>
