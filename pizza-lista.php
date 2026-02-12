@@ -64,6 +64,7 @@ try{
                 <th>ingredientes</th>
                 <th>tamanho</th>
                 <th>valor</th>
+                <th>Ações</th>
 
             </tr>
             <?php
@@ -75,6 +76,7 @@ try{
                 <td><?php echo $pizzas['ingredinte']?></td>
                 <td><?php echo $pizzas['tamanho']?></td>
                 <td><?php echo $pizzas['valor']?></td>
+                <td><a href="backend/deletar_pizza.php?id=" class="btn-del">deletar</a></td>
             </tr>
             <?php
             endforeach
