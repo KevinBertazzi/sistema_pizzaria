@@ -76,7 +76,10 @@ try{
                 <td><?php echo $pizza['ingredinte']?></td>
                 <td><?php echo $pizza['tamanho']?></td>
                 <td><?php echo $pizza['valor']?></td>
-                <td><a href="backend/deletar_pizza.php?id=<?php echo $pizza['id']?>" class="btn-del">deletar</a></td>
+                <td>
+                <a href="backend/deletar_pizza.php?id=<?php echo $pizza['id']?>" class="btn-del">deletar</a>    
+                <a href="editar_pizza.php?id=<?php echo $pizza['id']?>" class="btn-edt">editar</a>
+            </td>
             </tr>
             <?php
             endforeach
