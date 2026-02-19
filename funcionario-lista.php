@@ -74,7 +74,7 @@ try{
                 <td><?php echo $funcionario['nome']?></td>
                 <td><?php echo $funcionario['email']?></td>
                 <td><?php echo $funcionario['telefone']?></td>
-                 <td><a href="backend/deletar_pizza.php?id=" class="btn-del">deletar</a></td>
+                 <td><a href="backend/deletar-funcionario.php?id=<?php echo $funcionario['id']?>" class="btn-del">deletar</a></td>
             </tr>
             <?php
             endforeach

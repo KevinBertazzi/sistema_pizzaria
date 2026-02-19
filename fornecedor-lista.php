@@ -1,4 +1,3 @@
-
 <?php
 
 
@@ -14,14 +13,14 @@ try{
 
     $conexao->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-    $sql = "SELECT * from tb_pizza";
+    $sql = "SELECT * from tb_fornecedor";
 
     $comando = $conexao->prepare($sql);
     $comando-> execute();
 
 
     // ARMAZENA EM UM ARRAY AS PIZZAS CADASTRADAS NO BANCO
-    $pizzas = $comando->fetchAll(PDO::FETCH_ASSOC);
+    $fornecedores = $comando->fetchAll(PDO::FETCH_ASSOC);
 
 
     // FORMATA O CODIGO PARA EXIBIÇÃO VIA var_dump
@@ -47,36 +46,36 @@ try{
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listagem de pizzas</title>
+    <title>Listagem de fornecedores</title>
     <link rel="stylesheet" href="css/pizza2.css">
 </head>
 
 <body>
     <header>
-        <h1>Pizzaria listagem</h1>
+        <h1>Listagem de fornecedores</h1>
     </header>
     <main>
         <table>
             <tr>
 
                 <th>id</th>
-                <th>sabor</th>
-                <th>ingredientes</th>
-                <th>tamanho</th>
-                <th>valor</th>
+                <th>nome</th>
+                <th>telefone</th>
+                <th>email</th>
+                <th>Produto</th>
                 <th>Ações</th>
 
             </tr>
             <?php
-            foreach($pizzas as $pizza):
+            foreach($fornecedores as $fornecedor):
             ?>
             <tr>
-                <td><?php echo $pizza['id']?></td>
-                <td><?php echo $pizza['sabor']?></td>
-                <td><?php echo $pizza['ingredinte']?></td>
-                <td><?php echo $pizza['tamanho']?></td>
-                <td><?php echo $pizza['valor']?></td>
-                <td><a href="backend/deletar_pizza.php?id=<?php echo $pizza['id']?>" class="btn-del">deletar</a></td>
+                <td><?php echo $fornecedor['id']?></td>
+                <td><?php echo $fornecedor['nome']?></td>
+                <td><?php echo $fornecedor['telefone']?></td>
+                <td><?php echo $fornecedor['email']?></td>
+                <td><?php echo $fornecedor['produto']?></td>
+                <td><a href="backend/deletar_fornecedor.php?id=<?php echo $fornecedor['id']?>" class="btn-del">deletar</a></td>
             </tr>
             <?php
             endforeach
