@@ -58,7 +58,7 @@ try{
 
     <main>
 
-        <form action="backend/funcionario.php" method="post">
+        <form action="backend/atualizar-funcionario.php?id=<?php echo $funcionarios[0]['id'];?>" method="post">
             <div id="grid">
 
                 <div>

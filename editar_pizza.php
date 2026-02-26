@@ -74,7 +74,7 @@ try{
     <main>
 
 
-        <form action="backend/atualizar-pizza.php.php" method="post">
+        <form action="backend/atualizar-pizza.php?id=<?php echo $pizzas[0]['id'];?>" method="post">
 
 
             <div id="grid">
