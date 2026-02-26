@@ -1,8 +1,3 @@
-
-
-
-
-
 <?php
 
 
@@ -20,14 +15,14 @@ try{
 
     $id = $_GET['id'];
 
-    $sql = "SELECT * FROM  tb_pizza WHERE id=$id";
+    $sql = "SELECT * FROM  tb_fornecedor WHERE id=$id";
 
     $comando = $conexao->prepare($sql);
     $comando-> execute();
 
 
     // ARMAZENA EM UM ARRAY AS PIZZAS CADASTRADAS NO BANCO
-    $pizzas = $comando->fetchAll(PDO::FETCH_ASSOC);
+    $fornecedores = $comando->fetchAll(PDO::FETCH_ASSOC);
 
 
     // FORMATA O CODIGO PARA EXIBIÇÃO VIA var_dump
@@ -74,32 +69,29 @@ try{
     <main>
 
 
-        <form action="backend/atualizar-pizza.php?id=<?php echo $pizzas[0]['id'];?>" method="post">
+        <form action="backend/atualizar_fornecedor.php?id=<?php echo $fornecedores[0]['id'];?>" method="post">
 
 
             <div id="grid">
 
                 <div>
-                    <label for="">Sabor</label>
-                    <input type="text" name="sabor" id="sabor" value="<?php echo $pizzas[0]['sabor'];?>" required>
+                    <label for="">nome</label>
+                    <input type="text" name="nome" id="nome" value="<?php echo $fornecedores[0]['nome'];?>" required>
                 </div>
 
                 <div>
-                    <label for="">Ingrediente</label>
-                    <input type="text" name="ingrediente" id="ingrediente" value="<?php echo $pizzas[0]['ingredinte'];?>" required>
+                    <label for="">email</label>
+                    <input type="text" name="email" id="email" value="<?php echo $fornecedores[0]['email'];?>" required>
                 </div>
 
                 <div>
-                    <label for="">Tamanho</label>
-                    <select name="tamanho" id="" required>
-                        <option <?php if ($pizzas[0]['tamanho']=='P') echo 'selected' ?>  value="P">Pequena</option>
-                        <option <?php if ($pizzas[0]['tamanho']=='G') echo 'selected' ?>  value="G">Grande</option>
-                    </select>
+                    <label for="">telefone</label>
+                    <input type="text" name="telefone" id="telefone" value="<?php echo $fornecedores[0]['telefone'];?>" mistrequired>
                 </div>
 
                 <div>
-                    <label for="">valor</label>
-                    <input type="number" name="valor" id="valor"  step="0.01" min="1" value="<?php echo $pizzas[0]['valor'];?>" mistrequired>
+                    <label for="">produto</label>
+                    <input type="text" name="produto" id="produto"  value="<?php echo $fornecedores[0]['produto'];?>" mistrequired>
                 </div>
 
             </div>

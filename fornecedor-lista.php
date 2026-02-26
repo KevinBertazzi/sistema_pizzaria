@@ -75,7 +75,9 @@ try{
                 <td><?php echo $fornecedor['telefone']?></td>
                 <td><?php echo $fornecedor['email']?></td>
                 <td><?php echo $fornecedor['produto']?></td>
-                <td><a href="backend/deletar_fornecedor.php?id=<?php echo $fornecedor['id']?>" class="btn-del">deletar</a></td>
+                <td><a href="backend/deletar_fornecedor.php?id=<?php echo $fornecedor['id']?>" class="btn-del">deletar</a>
+                    <a href="editar-fornecedor.php?id=<?php echo $fornecedor['id']?>" class="btn-edt">editar</a>
+                </td>
             </tr>
             <?php
             endforeach
